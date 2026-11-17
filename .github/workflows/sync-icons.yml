@@ -1,3 +1,8 @@
+# Optimized by ci-cost (https://github.com/mariotavarez/ci-cost)
+# Applied 1 optimization:
+# - [LOW] Use shallow clone in "sync-icons" job
+# Estimated savings: ~0 min/run
+#
 on:
   workflow_dispatch:
 
@@ -17,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
           token: ${{ secrets.PAT_TOKEN }}
 
       - uses: pnpm/action-setup@v4
