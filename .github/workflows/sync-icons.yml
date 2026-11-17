@@ -11,6 +11,7 @@ jobs:
   sync-icons:
     name: Generate icons and create PR
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: write
       pull-requests: write
